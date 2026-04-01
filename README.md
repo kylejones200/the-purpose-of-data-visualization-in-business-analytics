@@ -1,13 +1,37 @@
-# The Purpose of Data Visualization in Business Analytics
+# Data Visualization
 
-**Published:** 2025-05-12
-**Medium:** [https://medium.com/@kyle-t-jones/the-purpose-of-data-visualization-in-business-analytics-8c9992df73eb](https://medium.com/@kyle-t-jones/the-purpose-of-data-visualization-in-business-analytics-8c9992df73eb)
+This project demonstrates various data visualization techniques using matplotlib, seaborn, and other libraries.
 
-## About
+## Project Structure
 
-Place the code for this article in this repository.
-The original article export is saved as `article.md`.
+```
+.
+├── README.md           # This file
+├── main.py            # Main entry point
+├── config.yaml        # Configuration file
+├── requirements.txt   # Python dependencies
+├── src/               # Core functions
+│   ├── core.py        # Visualization functions
+│   └── plotting.py    # Tufte-style plotting utilities
+├── tests/             # Unit tests
+├── data/              # Data files
+└── images/            # Generated plots and figures
+```
 
-## Files
+## Configuration
 
-Add your `.ipynb`, `.py`, `.yaml`, `.js`, `.ts`, or other project files here.
+Edit `config.yaml` to customize:
+- Data generation parameters (months, regions)
+- Visualization options (seaborn, weekly trends, store comparisons)
+- Output settings
+
+## Visualization Types
+
+- **Seaborn Line Plots**: Time series with multiple categories
+- **Weekly Trends**: Aggregated sales trends
+- **Store Comparisons**: Side-by-side store performance
+
+## Caveats
+
+- By default, generates synthetic sales data.
+- Interactive visualizations (Plotly, Altair, Streamlit) are optional and can be enabled in config.
