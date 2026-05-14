@@ -8,7 +8,7 @@ canonical_link: "https://medium.com/@kyle-t-jones/the-purpose-of-data-visualizat
 # The Purpose of Data Visualization in Business Analytics Data visualization is a form of reasoning. It is how we surface patterns
 and gaps, how we test hypotheses, how we communicate arguments...
 
-### **The Purpose of Data Visualization in Business Analytics**
+### The Purpose of Data Visualization in Business Analytics
 Data visualization is a form of reasoning. It is how we surface patterns and gaps, how we test hypotheses, how we communicate arguments, and how we make decisions.
 
 > Code is available on
@@ -32,7 +32,7 @@ This chapter teaches you how to avoid those traps. You will learn to create plot
 
 But we begin with the core principle: Your visualizations must tell the truth. If they don't, your analytics has no value.
 
-#### **Foundations of Good Visual Communication**
+#### Foundations of Good Visual Communication
 Clear charts do not emerge by accident. They are built on a foundation of design principles that reduce friction between the data and the viewer's understanding. This is not about beauty or artistic style. It is about signal clarity.
 
 Start with the principle of simplicity. Simplicity is not minimalism for its own sake. It means showing what matters and removing what doesn't. Every pixel on the screen should serve a purpose. If it doesn't, get rid of it.
@@ -53,7 +53,7 @@ These principles apply whether you're building a single figure or a full dashboa
 
 Next, we turn to dashboards --- how they function, who they serve, and how their design principles differ.
 
-#### **Strategic Use of Dashboards**
+#### Strategic Use of Dashboards
 A dashboard is a system of charts arranged to answer a set of questions at a glance. It is meant to be consulted, not read. And its design should reflect its purpose.
 
 Broadly, there are two categories of dashboards: those for executives and those for operations. Each has a different audience, rhythm, and visual grammar.
@@ -74,32 +74,32 @@ Tools like Streamlit make it easy to convert Python notebooks into dashboards. B
 
 The dashboard is a lens. Your job is to polish it until the signal is clear.
 
-#### **Visualization Libraries in Python**
+#### Visualization Libraries in Python
 Python provides several mature and flexible libraries for data visualization. Each one reflects a different philosophy. Understanding these differences helps you choose the right tool for the task.
 
-**Matplotlib** is the foundational library. Almost every other visualization library in Python builds on it. Think of it as a low-level drawing interface --- precise, stable, and endlessly customizable. It supports every chart type you might need: line plots, bar charts, histograms, scatter plots, pie charts, and more. But it can be verbose. You must specify many parameters directly, which gives you control but requires discipline.
+Matplotlib is the foundational library. Almost every other visualization library in Python builds on it. Think of it as a low-level drawing interface --- precise, stable, and endlessly customizable. It supports every chart type you might need: line plots, bar charts, histograms, scatter plots, pie charts, and more. But it can be verbose. You must specify many parameters directly, which gives you control but requires discipline.
 
 Use Matplotlib when you need publication-quality plots, when you want full control over every axis and label, or when integrating with other scientific libraries like NumPy, pandas, or SciPy. Matplotlib is also ideal when you want to export vector graphics, control font rendering, or embed plots in reports.
 
-**Seaborn** builds on Matplotlib and focuses on statistical plotting. It simplifies common tasks: showing distributions, adding confidence intervals, fitting regression lines, comparing grouped data, and building heatmaps. Seaborn manages color palettes, figure aesthetics, and subplot alignment automatically.
+Seaborn builds on Matplotlib and focuses on statistical plotting. It simplifies common tasks: showing distributions, adding confidence intervals, fitting regression lines, comparing grouped data, and building heatmaps. Seaborn manages color palettes, figure aesthetics, and subplot alignment automatically.
 
 Use Seaborn when you want to explore relationships quickly and cleanly. It handles grouped data directly from pandas DataFrames and adjusts plot elements to highlight statistical insights. Seaborn makes it easy to spot correlations, clusters, and anomalies in structured data.
 
-**Plotly** shifts to interactivity. It creates web-native, zoomable, clickable, and animated charts. It supports many advanced types: treemaps, sunbursts, 3D plots, choropleths, and time sliders. It works well in Jupyter notebooks and can be embedded into dashboards or exported as HTML.
+Plotly shifts to interactivity. It creates web-native, zoomable, clickable, and animated charts. It supports many advanced types: treemaps, sunbursts, 3D plots, choropleths, and time sliders. It works well in Jupyter notebooks and can be embedded into dashboards or exported as HTML.
 
 Use Plotly when you need to interact with your data, hover over points for details, or build charts that adapt as users click and zoom. It is excellent for storytelling, public dashboards, and exploratory analysis where readers control the lens.
 
-**Altair** is different. It is declarative: you don't describe how to draw the chart, you describe what the chart means. Altair uses a grammar of graphics based on Vega-Lite. This means every chart is a statement about encoding --- mapping data fields to visual properties like position, color, shape, or size.
+Altair is different. It is declarative: you don't describe how to draw the chart, you describe what the chart means. Altair uses a grammar of graphics based on Vega-Lite. This means every chart is a statement about encoding --- mapping data fields to visual properties like position, color, shape, or size.
 
 Use Altair when you want to create layered or faceted charts with minimal code. It's perfect for filtering, highlighting, brushing, and other interactive behaviors. Altair is more expressive than it is flexible. It won't give you the same control as Matplotlib, but it will give you clarity and speed.
 
-**Streamlit** is an application framework. It lets you turn Python scripts into web apps with widgets, sliders, and dropdowns. You can display Matplotlib, Plotly, and Altair charts inside a Streamlit app and add interactivity without writing HTML or JavaScript.
+Streamlit is an application framework. It lets you turn Python scripts into web apps with widgets, sliders, and dropdowns. You can display Matplotlib, Plotly, and Altair charts inside a Streamlit app and add interactivity without writing HTML or JavaScript.
 
 Use Streamlit when you want to share your analysis with non-technical users, build quick prototypes, or construct dashboards where filters and inputs matter. It's especially useful for data teams that want to distribute insights without deploying a full web app.
 
 Together, these libraries cover almost every visualization need in business analytics. In the next section, we build examples using each tool and compare their outputs in practice.
 
-#### **Examples and Implementations**
+#### Examples and Implementations
 Let's walk through practical examples that demonstrate how each visualization tool functions in Python. These examples use the same dataset to highlight style, syntax, and strengths across tools. We'll use a simple but realistic dataset: monthly sales data across three regions.
 
 Start by creating a sample DataFrame:
@@ -119,7 +119,7 @@ data = {
 df = pd.DataFrame(data)
 ```
 
-**Time Series Plot with Matplotlib and Seaborn**
+Time Series Plot with Matplotlib and Seaborn
 
 ```python
 import matplotlib.pyplot as plt
@@ -140,7 +140,7 @@ plt.show()
 
 This shows a clear line chart with region-specific colors and trend lines. It uses Seaborn for simplicity but relies on Matplotlib for axis control and styling.
 
-**Interactive Plot with Plotly**
+Interactive Plot with Plotly
 
 ```python
 import plotly.express as px
@@ -154,7 +154,7 @@ fig.show()
 
 Users can hover over points, zoom in, and export the plot. Plotly is ideal when you need interaction without additional dashboard logic.
 
-**Annotated Bar Chart with Altair**
+Annotated Bar Chart with Altair
 
 ```python
 import altair as alt
@@ -174,7 +174,7 @@ text = bar.mark_text(
 
 Altair uses declarative syntax to stack and annotate bars automatically, ideal for quick faceted or annotated views.
 
-**Streamlit Dashboard**
+Streamlit Dashboard
 
 Save the following as `app.py` and run with `streamlit run app.py`:
 
@@ -202,7 +202,7 @@ This dashboard allows filtering by region, displays line charts, KPIs, and optio
 
 Each tool serves a purpose. The skill lies in choosing the right one for the audience, the question, and the context.
 
-#### **Wrapping Up**
+#### Wrapping Up
 Visualization is not about drawing. It's about thinking. The process of building a plot forces you to ask what story the data tells, and how to make that story clear to someone else. This is where analytical skill meets design judgment.
 
 You now have a foundation in both theory and practice. You've seen that honest visualization begins with intent. It continues with clarity --- removing chartjunk, avoiding misleading scales, choosing color with care, and respecting cognitive limits. These choices are not aesthetic flourishes. They are ethical responsibilities.

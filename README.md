@@ -27,9 +27,9 @@ Edit `config.yaml` to customize:
 
 ## Visualization Types
 
-- **Seaborn Line Plots**: Time series with multiple categories
-- **Weekly Trends**: Aggregated sales trends
-- **Store Comparisons**: Side-by-side store performance
+- Seaborn Line Plots: Time series with multiple categories
+- Weekly Trends: Aggregated sales trends
+- Store Comparisons: Side-by-side store performance
 
 ## Caveats
 
