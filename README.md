@@ -1,5 +1,9 @@
 # Data Visualization
 
+Published: yes
+Medium: [https://medium.com/@kyle-t-jones/the-purpose-of-data-visualization-in-business-analytics-8c9992df73eb](https://medium.com/@kyle-t-jones/the-purpose-of-data-visualization-in-business-analytics-8c9992df73eb)
+
+
 This project demonstrates various data visualization techniques using matplotlib, seaborn, and other libraries.
 
 ## Project Structure
