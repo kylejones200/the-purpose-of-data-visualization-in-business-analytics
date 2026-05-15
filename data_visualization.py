@@ -6,7 +6,6 @@ import logging
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(message)s')
 
-np.random.seed(42)
 months = pd.date_range("2022-01-01", periods=12, freq="M")
 regions = ["North", "South", "West"]
 data = {
@@ -60,6 +59,7 @@ text = bar.mark_text(
 # Save the following as app.py and run with streamlit run app.py:
 
 import streamlit as st
+np.random.seed(42)
 
 st.title("Regional Sales Dashboard")
 selected_region = st.selectbox("Select Region", df["Region"].unique())
