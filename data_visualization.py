@@ -37,7 +37,7 @@ import plotly.express as px
 
 fig = px.line(df, x="Month", y="Sales", color="Region",
               markers=True, title="Monthly Sales by Region")
-fig.update_layout(title_font=dict(size=18), template="simple_white")
+fig.update_layout(title_font={'size': 18}, template="simple_white")
 fig.show()
 
 # Interactive Plot with Altair

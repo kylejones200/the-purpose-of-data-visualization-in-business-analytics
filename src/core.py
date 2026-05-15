@@ -3,7 +3,6 @@
 import pandas as pd
 import numpy as np
 from pathlib import Path
-from typing import Optional
 import matplotlib.pyplot as plt
 import seaborn as sns
 import logging
