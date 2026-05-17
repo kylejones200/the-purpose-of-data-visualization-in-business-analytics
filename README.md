@@ -39,3 +39,11 @@ Edit `config.yaml` to customize:
 
 - By default, generates synthetic sales data.
 - Interactive visualizations (Plotly, Altair, Streamlit) are optional and can be enabled in config.
+
+## Disclaimer
+
+Educational/demo code only. Not financial, safety, or engineering advice. Use at your own risk. Verify results independently before any production or operational use.
+
+## License
+
+MIT — see [LICENSE](LICENSE).
