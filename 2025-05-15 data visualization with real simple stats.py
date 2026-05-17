@@ -85,13 +85,15 @@ def set_minimalist_style():
     )
 
 
-def main() -> None:
+def notebook_step_002() -> None:
     print(mean([1, 2, 3]))
 
     print(z_score(85, 80, 5))
 
     print(lookup("μ"))
 
+
+def load_the_dataset() -> None:
     df = pd.read_csv("CalaverasData.csv")
 
     df = df[df["jump #"].isin([1, 2])]
@@ -100,10 +102,14 @@ def main() -> None:
 
     df.columns = ["jump_distance", "jump_number", "group"]
 
-    jump1_values = df[df["jump_number"] == 1]["jump_distance"].tolist()
+    jump1
+
+    _values = df[df["jump_number"] == 1]["jump_distance"].tolist()
 
     (jump1_values[:5], df.head())
 
+
+def load_and_clean_the_dataset() -> None:
     df = pd.read_csv("CalaverasData.csv")
 
     df = df[df["jump #"].isin([1, 2])]
@@ -138,7 +144,9 @@ def main() -> None:
 
     print("➡️ Frequency Table (Group):", freq_table)
 
-    jump1_rounded = [round(x) for x in jump1 if x > 0]
+    jump1
+
+    _rounded = [round(x) for x in jump1 if x > 0]
 
     cum_freq_table = draw_cumulative_frequency_table(jump1_rounded)
 
@@ -166,7 +174,9 @@ def main() -> None:
 
     plt.show()
 
-    jump1_df = df[df["jump_number"] == 1]
+    jump1
+
+    _df = df[df["jump_number"] == 1]
 
     sns.violinplot(data=jump1_df, x="group", y="jump_distance")
 
@@ -180,6 +190,8 @@ def main() -> None:
 
     plt.show()
 
+
+def plot_pdf() -> None:
     mu = mean(jump1)
 
     sigma = sample_std_dev(jump1)
@@ -214,6 +226,8 @@ def main() -> None:
 
     plt.show()
 
+
+def notebook_step_007() -> None:
     mu, sigma = (50, 10)
 
     data = np.random.normal(mu, sigma, 1000)
@@ -222,15 +236,24 @@ def main() -> None:
 
     plot_box(data)
 
-    import numpy as np
 
-    mu, sigma = (50, 10)
+def example_usage() -> None:
+    if __name__ == "__main__":
+        import numpy as np
 
-    data = np.random.normal(mu, sigma, 1000)
+        mu, sigma = (50, 10)
+        data = np.random.normal(mu, sigma, 1000)
+        plot_norm_hist(data, mu, sigma)
+        plot_box(data)
 
-    plot_norm_hist(data, mu, sigma)
 
-    plot_box(data)
+def main() -> None:
+    notebook_step_002()
+    load_the_dataset()
+    load_and_clean_the_dataset()
+    plot_pdf()
+    notebook_step_007()
+    example_usage()
 
 
 if __name__ == "__main__":
