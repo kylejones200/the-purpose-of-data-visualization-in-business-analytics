@@ -87,153 +87,87 @@ def set_minimalist_style():
 
 def notebook_step_002() -> None:
     print(mean([1, 2, 3]))
-
     print(z_score(85, 80, 5))
-
     print(lookup("μ"))
 
 
 def load_the_dataset() -> None:
     df = pd.read_csv("CalaverasData.csv")
-
     df = df[df["jump #"].isin([1, 2])]
-
     df = df[["jump distance", "jump #", "rent/ind/pro"]].dropna()
-
     df.columns = ["jump_distance", "jump_number", "group"]
-
     jump1
-
     _values = df[df["jump_number"] == 1]["jump_distance"].tolist()
-
     (jump1_values[:5], df.head())
 
 
 def load_and_clean_the_dataset() -> None:
     df = pd.read_csv("CalaverasData.csv")
-
     df = df[df["jump #"].isin([1, 2])]
-
     df = df[["jump distance", "jump #", "rent/ind/pro"]].dropna()
-
     df.columns = ["jump_distance", "jump_number", "group"]
-
     jump1 = df[df["jump_number"] == 1]["jump_distance"].tolist()
-
     print("➡️ Mean:", mean(jump1))
-
     print("➡️ Median:", median(jump1))
-
     print("➡️ Sample Standard Deviation:", sample_std_dev(jump1))
-
     print("➡️ Sample Variance:", sample_variance(jump1))
-
     print("➡️ Coefficient of Variation (%):", coefficient_of_variation(jump1))
-
     print("➡️ Interquartile Range:", interquartile_range(jump1))
-
     print("➡️ Five Number Summary:", five_number_summary(jump1))
-
     print("➡️ Is Discrete?", is_discrete(jump1))
-
     print("➡️ Is Continuous?", is_continuous(jump1))
-
     group_labels = df[df["jump_number"] == 1]["group"].astype(str).tolist()
-
     freq_table = draw_frequency_table(group_labels)
-
     print("➡️ Frequency Table (Group):", freq_table)
-
     jump1
-
     _rounded = [round(x) for x in jump1 if x > 0]
-
     cum_freq_table = draw_cumulative_frequency_table(jump1_rounded)
-
     print("➡️ Cumulative Frequency Table (Jump1 rounded):", cum_freq_table)
-
     plt.hist(jump1, bins=15, color="black", edgecolor="white")
-
     plt.title("Histogram of Jump 1 Distances")
-
     plt.xlabel("Distance (cm)")
-
     plt.ylabel("Frequency")
-
     plt.savefig("jump1_hist.png")
-
     plt.show()
-
     plt.boxplot(jump1, vert=False)
-
     plt.title("Boxplot of Jump 1 Distances")
-
     plt.xlabel("Distance (cm)")
-
     plt.savefig("jump1_box.png")
-
     plt.show()
-
     jump1
-
     _df = df[df["jump_number"] == 1]
-
     sns.violinplot(data=jump1_df, x="group", y="jump_distance")
-
     plt.title("Jump 1 Distance by Group (Rent/Ind/Pro)")
-
     plt.xlabel("Group")
-
     plt.ylabel("Jump Distance (cm)")
-
     plt.savefig("jump1_violin.png")
-
     plt.show()
 
 
 def plot_pdf() -> None:
     mu = mean(jump1)
-
     sigma = sample_std_dev(jump1)
-
     xs = [x for x in range(100, 200)]
-
     ys_pdf = [normal_pdf(x, mu, sigma) for x in xs]
-
     ys_cdf = [normal_cdf(x, mu, sigma) for x in xs]
-
     plt.plot(xs, ys_pdf, color="black")
-
     plt.title("Normal PDF of Jump 1 Distances")
-
     plt.xlabel("Jump Distance (cm)")
-
     plt.ylabel("Density")
-
     plt.savefig("jump1_normal_pdf.png")
-
     plt.show()
-
     plt.plot(xs, ys_cdf, color="black")
-
     plt.title("Normal CDF of Jump 1 Distances")
-
     plt.xlabel("Jump Distance (cm)")
-
     plt.ylabel("Cumulative Probability")
-
     plt.savefig("jump1_normal_cdf.png")
-
     plt.show()
 
 
 def notebook_step_007() -> None:
     mu, sigma = (50, 10)
-
     data = np.random.normal(mu, sigma, 1000)
-
     plot_norm_hist(data, mu, sigma)
-
     plot_box(data)
 
 
