@@ -6,6 +6,14 @@ Medium: [https://medium.com/@kyle-t-jones/the-purpose-of-data-visualization-in-b
 
 This project demonstrates various data visualization techniques using matplotlib, seaborn, and other libraries.
 
+## Business context
+
+Data visualization is a form of reasoning. It is how we surface patterns and gaps, how we test hypotheses, how we communicate arguments, and how we make decisions.
+
+> Code is available on > [github](https://github.com/kylejones200/medium/tree/main/article-2025-05-12-data-visualization)
+
+A good visual clarifies something essential. A bad viz distorts or conceals. Every visual carries assumptions. The decision to use a bar chart over a line chart, the scale of the y-axis, the ordering of categories, the use of red to mark one data point instead of another --- these are all choices that shape how someone interprets your message.
+
 ## Project Structure
 
 ```
